@@ -1,3 +1,4 @@
+from operator import index
 import pandas as pd
 import numpy as np
 
@@ -33,4 +34,19 @@ df_app = df.append(ser, ignore_index=True)
 # print('{}\n'.format(df_app))
 df2 = pd.DataFrame([[2, 4], [9, 8]])
 df_app = df.append(df2)
-print('{}\n'.format(df_app))
+# print('{}\n'.format(df_app))
+
+#Dropping data
+df = pd.DataFrame([{'c1': [1, 3], 'c2': [4, 2], 'c3': [3, 8]}], index=['r1', 'r2', 'r3'])
+
+#drop row1
+df_drop = df.drop(labels='r1')
+
+df_drop = df.drop(labels=['c1', 'c3'], axis=1)
+
+df_drop = df.drop(index='r2')
+
+df_drop = df.drop(columns='c2')
+
+df.drop(index='r2', columns='c2')
+print('{}\n'.format(df_drop))
