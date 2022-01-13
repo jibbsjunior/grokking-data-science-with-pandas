@@ -26,4 +26,8 @@ series = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
 # print('{}\n'.format(series))
 
 series = pd.Series([6, 9, 5], index=['a', 8, 9])
+# print('{}\n'.format(series))
+
+#Dictionary input
+series = pd.Series({'a': 1, 'b': 2, 'c': 3})
 print('{}\n'.format(series))
