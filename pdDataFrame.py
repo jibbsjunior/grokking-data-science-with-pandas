@@ -49,4 +49,20 @@ df_drop = df.drop(index='r2')
 df_drop = df.drop(columns='c2')
 
 df.drop(index='r2', columns='c2')
-print('{}\n'.format(df_drop))
+# print('{}\n'.format(df_drop))
+
+# #Quiz
+# 1. The coding exercise for this chapter involves creating various pandas DataFrame objects.
+# We'll first create a DataFrame from a Python dictionary. The dictionary will have key-value pairs 'c1':[0, 1, 2, 3] and 'c2':[5, 6, 7, 8], in that order.
+# The index for the DataFrame will come from the list of row labels ['r1', 'r2', 'r3', 'r4'].
+# Set df equal to pd.DataFrame with the specified dictionary as the first argument and the list of row labels as the index keyword argument.
+df = pd.DataFrame({'c1': [0, 1, 2, 3], 'c2': [5, 6, 7, 8]}, index=['r1', 'r2', 'r3', 'r4'])
+# print('{}\n'.format(df))
+
+# 2. We'll create another DataFrame, this one representing a single row. Rather than a dictionary for the first argument, we use a list of lists, and manually set the column labels to ['c1, 'c2'].
+# Since there is only one row, the row labels will be ['r5'].
+row_df = pd.DataFrame([[9, 9]], columns=['c1', 'c2'], index=['r5'])
+
+# 3. After creating row_df, we append it to the end of df and drop row 'r2'.
+df_app = df.append(row_df)
+df_drop = df_app.drop(labels='r2')
