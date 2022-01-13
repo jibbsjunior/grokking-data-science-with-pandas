@@ -19,4 +19,11 @@ series = pd.Series(arr, dtype=np.float32)
 # print('{}\n'.format(series))
 
 series = pd.Series([[1, 2], [2, 3]])
+# print('{}\n'.format(series))
+
+#Index
+series = pd.Series([1, 2, 3], index=['a', 'b', 'c'])
+# print('{}\n'.format(series))
+
+series = pd.Series([6, 9, 5], index=['a', 8, 9])
 print('{}\n'.format(series))
