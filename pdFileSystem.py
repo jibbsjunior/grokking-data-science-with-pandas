@@ -10,3 +10,7 @@ df = pd.read_csv('./pandas/dummy.csv', index_col=1)
 # print('{}\n'.format(df))
 
 #excel
+df = pd.read_excel('./pandas/excel_dummy.xlsx')
+
+df = pd.read_excel('./pandas/dummy_excel.xlsx', sheet_name=None)
+print('{}\n'.format(df))
