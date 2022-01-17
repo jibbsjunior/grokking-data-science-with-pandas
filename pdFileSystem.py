@@ -37,5 +37,18 @@ with pd.ExcelWriter('./pandas/data.xlsx') as writer:
     df1.to_excel(writer, index=False, sheet_name='RD')
 
 df_read = pd.read_excel('./pandas/data.xlsx')
-print('{}\n'.format(df_read))
+# print('{}\n'.format(df_read))
+
+#json
+df = pd.DataFrame([['Ajibola Rilwan', 'Ajibola Olaide'], ['Adebayo Rilwan', 'Ajibola Olalekan'], ['Rilwan Olaide', 'Olaide AJibola']])
+
+# df.to_json('./pandas/data.json')
+# df2 = pd.read_json('./pandas/data.json')
+
+df.to_json('./pandas/data.json', orient='index')
+df2 = pd.read_json('./pandas/data.json')
+df2 = pd.read_json('./pandas/data.json', orient='index')
+
+print('{}\n'.format(df2))
+
 
