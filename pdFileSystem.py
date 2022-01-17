@@ -1,3 +1,4 @@
+from ast import With
 from operator import index
 import pandas as pd
 
@@ -24,5 +25,17 @@ import pandas as pd
 
 #writing to files - csv
 df = pd.DataFrame([['Adebayo AJibola', 'Adegbenro Mariam', 'Stephen Akpovino'], ['Lanre Kuye', 'Big Abbass']])
-df.to_csv()
-print('{}\n'.format(df))
+# df.to_csv('data.csv', index=False)
+# temp = pd.read_csv('data.csv')
+# print('{}\n'.format(temp))
+
+#excel
+df = pd.DataFrame([['Ajibola Rilwan', 'Ajibola Olaide'], ['Adebayo Rilwan', 'Ajibola Olalekan'], ['Rilwan Olaide', 'Olaide AJibola']])
+df1 = pd.DataFrame([['Olaide', 'AJibola'], ['Olalekan', 'Ridwan'], ['Adebayo', 'Ogidan']])
+with pd.ExcelWriter('./pandas/data.xlsx') as writer:
+    df.to_excel(writer, index=False, sheet_name='Jb')
+    df1.to_excel(writer, index=False, sheet_name='RD')
+
+df_read = pd.read_excel('./pandas/data.xlsx')
+print('{}\n'.format(df_read))
+
