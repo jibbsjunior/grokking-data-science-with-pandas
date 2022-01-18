@@ -20,3 +20,16 @@ sort3 = df.sort_values(['yearID', 'playerID'] ,ascending=[True, False])
 sort4 = df.sort_values(['yearID', 'HR'],
                        ascending=[True, False])
 # print('{}\n'.format(sort4))
+
+#Quiz
+# 1. We'll sort yearly_stats_df using two different methods. The first method sorts by 'yearID' in ascending order.
+# CODE HERE
+# by_year = yearly_stats_df.sort_values('yearID')
+
+# 2. The next sorting method will sort by 'HR' in descending order.
+# CODE HERE
+# best_hr = yearly_stats_df.sort_values('HR', ascending=False)
+
+# 3. The final sorting method will again sort yearly_stats_df by 'HR' in descending order, but this time we break ties with 'SO' in ascending order.
+# CODE HERE
+# best_hr_so = yearly_stats_df.sort_values(['HR', 'SO'], ascending=[False, True])
