@@ -16,4 +16,20 @@ metrics2 = hr_rbi.describe()
 metrics2 = hr_rbi.describe(percentiles=[.5])
 metrics2 = hr_rbi.describe(percentiles=[.1])
 metrics2 = hr_rbi.describe(percentiles=[.2, .8])
-print('{}\n'.format(metrics2))
+# print('{}\n'.format(metrics2))
+
+#Categorical Features
+p_ids = df['playerID']
+# print('{}\n'.format(p_ids.value_counts()))
+# print('{}\n'.format(p_ids.value_counts(normalize=True)))
+# print('{}\n'.format(p_ids.value_counts(ascending=True)))
+unique_players = df['playerID'].unique()
+# print('{}\n'.format(repr(unique_players)))
+
+unique_teams = df['teamID'].unique()
+# print('{}\n'.format(repr(unique_teams)))
+y_ids = df['yearID']
+# print('{}\n'.format(y_ids))
+# print('{}\n'.format(repr(y_ids.unique())))
+print('{}\n'.format(y_ids.value_counts()))
+
