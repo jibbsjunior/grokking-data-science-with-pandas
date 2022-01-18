@@ -7,7 +7,7 @@ df = pd.DataFrame({
   'playerID': ['bettsmo01', 'canoro01', 'cruzne02', 'ortizda01', 'cruzne02', 'canoro01'],
   'yearID': [2016, 2016, 2016, 2016, 2017, 2019],
   'teamID': ['BOS', 'SEA', 'SEA', 'BOS', 'SEA', np.nan],
-  'HR': [31, 39, 43, 38, 39, 40
+  'HR': [21, 39, 43, 38, 39, 40
 ]})
 
 # print('{}\n'.format(df))
@@ -39,3 +39,10 @@ isna = df['teamID'].isna()
 
 isnotna = df['teamID'].notna()
 # print('{}\n'.format(isnotna))
+
+#Feature Filtering
+hr40_df = df[df['HR'] > 40]
+# print('{}\n'.format(hr40_df))
+
+nothr30_hf = df[~(df['HR'] > 30)]
+print('{}\n'.format(nothr30_hf))
