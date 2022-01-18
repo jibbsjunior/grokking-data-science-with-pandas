@@ -45,4 +45,18 @@ hr40_df = df[df['HR'] > 40]
 # print('{}\n'.format(hr40_df))
 
 nothr30_hf = df[~(df['HR'] > 30)]
-print('{}\n'.format(nothr30_hf))
+# print('{}\n'.format(nothr30_hf))
+
+#Quiz
+# 1. We'll first filter mlb_df for the top MLB hitting seasons in history, which we define as having a batting average above .300.
+# CODE HERE
+# top_hitters = mlb_df[mlb_df['BA'] > .300]
+
+# 2. Next we filter for the players whose player ID does not start with the letter a.
+# CODE HERE
+# exclude_a = mlb_df[~mlb_df['playerID'].str.startswith('a')]
+
+# 3. We'll now retrieve the statistics for two specific players. Their player IDs are 'bondsba01' and 'troutmi01'.
+# CODE HERE
+# two_ids = ['bondsba01', 'troutmi01']
+# two_players = mlb_df[mlb_df['playerID'].isin(two_ids)]
